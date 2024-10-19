@@ -75,6 +75,11 @@ The server will start on `http://localhost:3000` by default.
 
 The backend uses **MongoDB** to store rules and nodes for representing ASTs. Below is a detailed design of the MongoDB schemas used:
 
+<div align="center">
+<img width="798" alt="Screenshot 2024-10-19 at 1 50 53 PM" src="https://github.com/user-attachments/assets/ec159483-0f36-450c-b81f-5c297ee18854">
+</div>
+
+
 1. **Node Schema**
    - Represents individual nodes of an AST.
    - Each node can be of type 'operator' or 'operand'.

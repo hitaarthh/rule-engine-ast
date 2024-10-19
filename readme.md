@@ -4,16 +4,19 @@
 
 The **Rule Engine with AST** is a versatile application designed to determine user eligibility based on various attributes such as age, department, income, and spending. This system utilizes an Abstract Syntax Tree (AST) to represent conditional rules, allowing for dynamic creation, combination, and modification of these rules.
 
+<div align="center">
 <img width="1440" alt="Screenshot 2024-10-19 at 1 37 34 PM" src="https://github.com/user-attachments/assets/3e365785-c250-4722-9b89-650d3e750695">
-
+</div>
 
 ## Features 🚀
 
 ### 1. Rule Creation and Management
 - **Dynamic Rule Creation**: Users can create rules using a simple UI, which are then represented as AST nodes.
 - **Combination of Rules**: The system allows for the combination of multiple rules into a single AST, optimizing performance and efficiency.
-<img width="807" alt="Screenshot 2024-10-19 at 1 38 53 PM" src="https://github.com/user-attachments/assets/8fa6894e-dfc6-44fe-bb52-3cb58dcc543e">
 
+<div align="center">
+<img width="807" alt="Screenshot 2024-10-19 at 1 38 53 PM" src="https://github.com/user-attachments/assets/8fa6894e-dfc6-44fe-bb52-3cb58dcc543e">
+</div>
 
 ### 2. Abstract Syntax Tree (AST) Representation 🌳
 - **Flexible Data Structure**: The application utilizes a flexible data structure to represent rules as nodes, allowing for:
@@ -23,8 +26,10 @@ The **Rule Engine with AST** is a versatile application designed to determine us
 ### 3. Rule Evaluation 🔍
 - **Evaluate Rules Against User Data**: The system evaluates the combined AST against user data (e.g., age, department, salary) to determine eligibility.
 - **Immediate Feedback**: Users receive immediate feedback based on the evaluation results.
-<img width="769" alt="Screenshot 2024-10-19 at 1 38 38 PM" src="https://github.com/user-attachments/assets/598bb174-c329-449f-9706-25d9cc19ad9a">
 
+<div align="center">
+<img width="769" alt="Screenshot 2024-10-19 at 1 38 38 PM" src="https://github.com/user-attachments/assets/598bb174-c329-449f-9706-25d9cc19ad9a">
+</div>
 
 ## Application Structure 📂
 

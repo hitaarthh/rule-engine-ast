@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+  <h2>Validate Rule</h2>
+
+  <form [formGroup]="validationForm" (ngSubmit)="evaluateRule()" class="validate-form">
+    <div class="form-group">
+      <label for="ruleSelect">Select Rule:</label>
+      <select id="ruleSelect" class="form-control" formControlName="selectedRuleId">
+        <option value="">-- Select a rule --</option>
+        <option *ngFor="let rule of rules" [value]="rule._id">{{rule.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" class="form-control" formControlName="age" placeholder="Enter age">
+    </div>
+
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input type="text" id="department" class="form-control" formControlName="department" placeholder="Enter department">
+    </div>
+
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="number" id="salary" class="form-control" formControlName="salary" placeholder="Enter salary">
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Experience (years):</label>
+      <input type="number" id="experience" class="form-control" formControlName="experience" placeholder="Enter years of experience">
+    </div>
+
+    <div class="button-container">
+      <button type="submit" class="btn btn-success" [disabled]="validationForm.invalid">Validate</button>
+    </div>
+  </form>
+
+  <div class="mt-3 p-3 border rounded" *ngIf="evaluationResult !== null">
+    <h3>Evaluation Result:</h3>
+    <p class="lead" [ngClass]="{'text-success': evaluationResult, 'text-danger': !evaluationResult}">
+      <strong>{{evaluationResult ? 'Rule Passed' : 'Rule Failed'}}</strong>
+    </p>
+    <p *ngIf="evaluationResult">Congratulations! The user is eligible based on the selected rule.</p>
+    <p *ngIf="!evaluationResult">Unfortunately, the user is not eligible based on the selected rule.</p>
+    <p>Evaluated data:</p>
+    <ul>
+      <li>Age: {{validationForm.get('age')?.value}}</li>
+      <li>Department: {{validationForm.get('department')?.value}}</li>
+      <li>Salary: {{validationForm.get('salary')?.value}}</li>
+      <li>Experience: {{validationForm.get('experience')?.value}} years</li>
+    </ul>
+  </div>
+</div>

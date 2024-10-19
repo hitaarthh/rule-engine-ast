@@ -1,0 +1,179 @@
+/* General styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.jumbotron {
+    background-color: #28a745;
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #343a40;
+    margin-bottom: 0;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-item .nav-link {
+    color: white;
+    padding: 10px 15px;
+}
+
+.nav-item .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.content-wrapper {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-wrapper {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-wrapper h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-underline {
+    color: #333;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .tech-pill {
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+  }
+  
+  .about-wrapper ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .about-wrapper li {
+    margin-bottom: 10px;
+  }
+  
+  .about-wrapper h6 {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-wrapper p {
+    margin-bottom: 15px;
+  }
+
+.tech-pill {
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.about-underline {
+    border-bottom: 2px solid #28a745;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* Footer Styling */
+.app-footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.app-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-footer a:hover {
+    opacity: 0.7;
+}
+
+/* Ensure consistent container behavior */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Rule Engine Frontend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" (click)="showHome()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" (click)="showAbout()">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/hitarth-rohra/" target="_main">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div *ngIf="isHome">
+        <!-- Jumbotron for Home Page -->
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to Rule Engine Frontend</h1>
+        </div>
+        <!-- Main Content for Rule Engine -->
+        <main class="app-main container">
+
+            <!-- Disclaimer for Rule Creation -->
+            <div class="content-wrapper">
+                <div class="alert alert-info">
+                    <strong>Disclaimer:</strong> Please ensure that the rule string adheres to the following syntax:
+                    <ul>
+                        <li>Use logical operators like <code>AND</code> or <code>OR</code> to combine conditions.
+                        </li>
+                        <li>Conditions can use comparison operators like <code>=</code>, <code>!=</code>,
+                            <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.
+                        </li>
+                        <li>Strings should be enclosed in single quotes, e.g., <code>department = 'Sales'</code>.
+                        </li>
+                    </ul>
+                    <p>Example:
+                        <code>age &gt; 30 AND department = 'Sales' AND salary &gt; 50000 OR experience &gt; 5</code>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Rule Form Section -->
+            <div class="content-wrapper">
+                <app-rule-form></app-rule-form>
+            </div>
+
+            <!-- Rule Management Section -->
+            <div class="content-wrapper">
+                <app-rule-management></app-rule-management>
+            </div>
+
+            <!-- Combine Rules Section -->
+            <div class="content-wrapper">
+                <app-combine-rules></app-combine-rules>
+            </div>
+
+            <!-- Validate Rule Section -->
+            <div class="content-wrapper">
+                <app-validation></app-validation>
+            </div>
+        </main>
+    </div>
+
+    <main class="app-main container" *ngIf="!isHome">
+        <div class="about-wrapper content-wrapper">
+          <h2>About Rule Engine System</h2>
+          <p>Our Rule Engine System is a sophisticated 3-tier application designed to determine user eligibility based on various attributes such as age, department, income, and spend. It leverages Abstract Syntax Trees (AST) to represent and process conditional rules efficiently.</p>
+      
+          <h5 class="about-underline">Key Features</h5>
+          <ul>
+            <li>Create and manage complex logical rules efficiently</li>
+            <li>Support for syntax validation, rule combination, and real-time rule testing</li>
+            <li>Dynamic creation, combination, and modification of rules using AST</li>
+            <li>Efficient data structure for representing and manipulating rules</li>
+            <li>Robust API design for rule creation, combination, and evaluation</li>
+          </ul>
+      
+          <h5 class="about-underline">Technical Details</h5>
+          <h6>Data Structure</h6>
+          <p>Our system uses a flexible Node-based structure to represent the Abstract Syntax Tree:</p>
+          <ul>
+            <li><strong>type:</strong> Indicates node type (e.g., "operator" for AND/OR, "operand" for conditions)</li>
+            <li><strong>left:</strong> Reference to the left child node</li>
+            <li><strong>right:</strong> Reference to the right child node (for operators)</li>
+            <li><strong>value:</strong> Optional value for operand nodes (e.g., number for comparisons)</li>
+          </ul>
+      
+          <h6>API Functionality</h6>
+          <ul>
+            <li><strong>create_rule(rule_string):</strong> Converts a string representation of a rule into an AST</li>
+            <li><strong>combine_rules(rules):</strong> Merges multiple rule ASTs into a single, optimized AST</li>
+            <li><strong>evaluate_rule(JSON data):</strong> Assesses a given set of attributes against the rule AST</li>
+          </ul>
+      
+          <h5 class="about-underline">Future Enhancements</h5>
+          <ul>
+            <li>Advanced debugging tools for complex rule analysis</li>
+            <li>User-friendly templates to simplify rule creation</li>
+            <li>Support for user-defined functions within the rule language</li>
+            <li>Enhanced error handling and validation mechanisms</li>
+          </ul>
+      
+          <h5 class="about-underline">Objective</h5>
+          <p>To provide a robust and scalable rule management system that supports dynamic rule creation and testing for various use cases, enabling businesses to implement complex decision logic efficiently.</p>
+      
+          <h5 class="about-underline">Web Technologies Used:</h5>
+          <div>
+            <span class="tech-pill">Angular</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Bootstrap</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express.js</span>
+          </div>
+        </div>
+      </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container">
+            <p>&copy; 2024 Rule Engine System. All Rights Reserved.</p>
+            <a href="https://github.com/hitaarthh/rule-engine-ast" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

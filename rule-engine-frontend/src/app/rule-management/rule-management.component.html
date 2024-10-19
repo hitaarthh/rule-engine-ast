@@ -1,0 +1,22 @@
+<!-- Rule Management Section -->
+<div class="rule-management-container">
+  <h2>Rule Management</h2>
+  <table class="rule-management-table">
+    <thead>
+      <tr>
+        <th>Rule Name</th>
+        <th>Rule ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rule of rules">
+        <td>{{ rule.name }}</td>
+        <td>{{ rule._id }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteRule(rule._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+/* Rule Management Table */
+.rule-management-container {
+  margin-top: 20px;
+}
+
+.rule-management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rule-management-table th,
+.rule-management-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.rule-management-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.rule-management-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.rule-management-table tr:hover {
+  background-color: #ddd;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
